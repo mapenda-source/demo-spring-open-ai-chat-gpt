@@ -21,7 +21,7 @@ public class OpenAPIRestController {
         request.put("messages", List.of(message));
         request.put("model","gpt-3.5-turbo-0301");
         HttpHeaders headers=new HttpHeaders();
-        headers.set("Authorization","Bearer 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");
+        headers.set("Authorization","Bearer api");
         headers.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<Map> httpEntity=new HttpEntity<>(request,headers);
         ResponseEntity<String> exchange = restTemplate.exchange(
